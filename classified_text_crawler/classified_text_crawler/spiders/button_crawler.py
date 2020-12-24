@@ -25,10 +25,19 @@ class ButtonCrawler(scrapy.Spider):
     start_urls = allowed_domains()
 
     def parse(self, response):
-        button_texts = response.xpath('//button/text()').getall()
-        if len(button_texts):
+        selectors = [
+            response.xpath('//button/text()'),
+            response.css('a.btn::text'),
+            response.css('a.Button::text'),
+            response.css('a.button::text'),
+        ]
+        texts = []
+        for selector in selectors:
+            texts += selector.getall()
+
+        if len(texts):
             yield {
-                "texts": filter_valid_texts(button_texts)
+                'texts': filter_valid_texts(texts)
             }
 
         for next_page in response.css('a'):

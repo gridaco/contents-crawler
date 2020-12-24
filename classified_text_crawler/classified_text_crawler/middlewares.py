@@ -30,7 +30,7 @@ class DomainDepthMiddleware(object):
 
                 if maxdepth and depth > maxdepth:
                     logging.debug(
-                        f"Ignoring link (depth > {maxdepth}): {request.url} ")
+                        f'Ignoring link (depth > {maxdepth}): {request.url}')
                     return False
             return True
 

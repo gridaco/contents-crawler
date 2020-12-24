@@ -12,7 +12,12 @@ BOT_NAME = 'classified_text_crawler'
 SPIDER_MODULES = ['classified_text_crawler.spiders']
 NEWSPIDER_MODULE = 'classified_text_crawler.spiders'
 
-DOMAIN_DEPTHS = {'github.com': 10, 'naver.com': 10, 'line.me': 10}
+DOMAIN_DEPTHS = {
+    'github.com': 10,
+    'naver.com': 10,
+    'line.me': 10,
+    'uistore.design': 10
+}
 DEPTH_LIMIT = 5
 
 FEED_EXPORT_ENCODING = 'utf-8'
