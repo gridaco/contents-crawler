@@ -1,6 +1,5 @@
 # contents-crawler
-a fully customizable web contents crawler for collecting ml dataset
-
+A fully customizable web contents crawler for collecting ml dataset.
 
 ## packages
 
@@ -9,19 +8,16 @@ a fully customizable web contents crawler for collecting ml dataset
 - image crawler
 - screen shot crawler
 
-
 ## Contribution
-follows general bridged contributing guideline
-
+Follows general bridged contributing guideline
 
 ## Development
-uses scrapy with python3
-
-
+Crawlers powered by [Scrapy](https://github.com/scrapy/scrapy) with Python3.
+It'll later use Selenium for collecting screenshots & supporting client-side rendered apps.
 
 ## Run it on your own
 (WIP) - tutorial will be provided soon
 
 
 ## No, I just want the ready data set.
-goto [ui-dataset](https://github.com/bridgedxyz/ui-dataset) for ml-ready dataset
+Goto [ui-dataset](https://github.com/bridgedxyz/ui-dataset) for ml-ready dataset
